@@ -5,10 +5,13 @@
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
 
 # completions
-if [ ! -d ./conda-zsh-completion ]; then
-    git clone https://github.com/esc/conda-zsh-completion
+
+current_dir="$ZAP_PLUGIN_DIR/zsh-miniconda"
+
+if [ ! -d "$current_dir/conda-zsh-completion" ]; then
+    git clone https://github.com/esc/conda-zsh-completion "$current_dir/conda-zsh-completion"
 fi
 
-current_dir="${full_path:a:h}"
 fpath+=$current_dir/conda-zsh-completion
 compinit conda
+
