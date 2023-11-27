@@ -3,6 +3,7 @@
 
 # load conda
 [ -f /opt/miniconda3/etc/profile.d/conda.sh ] && source /opt/miniconda3/etc/profile.d/conda.sh
+[ -f /opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh ] && source /opt/homebrew/Caskroom/miniconda/base/etc/profile.d/conda.sh
 
 # completions
 
